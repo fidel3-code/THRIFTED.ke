@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THRIFTED.ke</title>
+
+      <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+     <br><br>
+
+     <section class="row"> 
+
+        <div class="col-md-12">
+
+            <nav class="navbar bg-secondary navbar-dark navbar-expand-md">
+
+                <a href="#" class="navbar-brand"><h1 style="font-family: cursive; font-size: xx-large;">THRIFTED.ke</h1></a>
+                
+
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarcollapse">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarcollapse">
+
+
+                    <div class="navbar-nav">
+
+                        <a href="index.html" class="nav-link active">Home</a>
+                        
+                        
+                        <a href="Foot Wear.html" class="nav-link">FOOT WEAR</a>
+                        <a href="Accessories.html" class="nav-link">ACCESSORIES</a>
+                        <a href="Payements.html" class="nav-link">PAY NOW</a>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+            </nav>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+    <marquee behavior="" direction="" style="background-color: rgb(226, 10, 10); color: white;">&star;&star;&star;&star;DELIVERIES MADE COUNTRY WIDE&star;&star;&star;&star;</marquee>
+
+
+    <h2 style="background-color: rgb(82, 221, 82); color: white;"><img src="Images/Mpesa.jpeg" alt="" height="100px"></h2>
+
+<form id="mpesaForm" style="background-color: rgb(99, 231, 99); color: white;">
+  <input type="text" id="phone" placeholder="Enter Your Phone No" required />
+  <br><br>
+  <input type="number" id="amount" placeholder="Amount" required />
+  <br><br>
+  <input type="text" id="" placeholder="Product Name" required />
+  <br><br>
+  <button type="submit">Pay Now</button>
+  <br><br>
+</form>
+
+<script>
+document.getElementById("mpesaForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  fetch("https://your-backend-url.com/stkpush", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      phone: document.getElementById("phone").value,
+      amount: document.getElementById("amount").value
+    })
+  })
+  .then(res => res.json())
+  .then(data => alert(data.message))
+  .catch(err => console.error(err));
+});
+</script>
+
+
+<br><br>
+
+
+
+
+
+    <section class="row bg-secondary">
+
+        <div class="col-md-4 text-white text-center">
+
+            <h4>About us</h4>
+
+            <p>We specialize in curated vintage, retro, and branded clothing, often focusing on specific styles like Y2K or workwear.</p>
+
+            <p>"Welcome to THRIFTED.ke, your online destination for handpicked vintage and modern thrifted fashion. We curate one-of-a-kind styles that allow you to express yourself while promoting a sustainable, circular fashion future. Discover your next favorite piece."</p>
+
+
+
+        </div>
+
+
+        <div class="col-md-4 text-white">
+            <h4>Contact Us</h4>
+
+            <form action="">
+
+                <input type="email" placeholder="Enter your email" class="form-control">
+
+                <br><br>
+
+                <textarea name="" id="" placeholder="leave a comment" class="form-control" style="width: 330px;height: 150px;"></textarea>
+
+                <br>
+
+                <input type="submit" class="btn btn-outline-danger text-center" placeholder="send message" >
+    
+
+
+
+
+            </form>
+
+
+            
+        </div>
+
+
+        <div class="col-md-4">
+            <h4 class="text-white">Stay connected</h4>
+            
+            <p>You can now find us on ALL social platforms</p>
+
+            <a href="https:/www.facebook.com"><img src="Images/fb.png" alt=""></a>
+            <a href="https://www.instagram.com"><img src="Images/in.png" alt=""></a>
+            <a href="https://www.x.com"><img src="Images/x.png" alt=""></a>
+            <a href="https://www.whatsapp.com"><img src="Images/wap.jpg" alt=""></a>
+
+            <p>Phone :</p><a href="https://www.call.com" style="color: white; font-size: x-large; font-family: cursive; text-decoration: solid;">0100028899</a>
+
+            
+
+
+
+            
+        </div>
+
+
+
+
+
+
+     </section>
+
+
+        <footer class="bg-dark text-center text-white" style="height: 40px;">
+
+        <h4>Developed By Fidell &copy;All rights resrved</h4>
+
+     </footer>
+
+    
+</body>
+</html>
